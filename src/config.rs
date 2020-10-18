@@ -20,6 +20,7 @@ pub enum Url {
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 pub struct Baidu {
+    #[serde(flatten)]
     pub url: Url,
     pub app_id: String,
     pub key: String,
