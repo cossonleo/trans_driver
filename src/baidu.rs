@@ -73,7 +73,3 @@ impl Api for Translator {
     }
 }
 
-#[test]
-fn test_baidu() {
-    println!("{}", text);
-}
