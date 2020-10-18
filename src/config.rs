@@ -3,13 +3,6 @@ use serde::Deserialize;
 use std::ffi::{OsStr, OsString};
 use std::path::{Component, Path, PathBuf};
 
-//#[serde(rename_all = "snake_case", tag = "type")]
-//#[derive(Debug, Deserialize, Clone)]
-//pub enum Url {
-//    Http{ addr: String },
-//    Https{ addr: String },
-//}
-
 #[derive(Debug, Deserialize, Clone)]
 #[serde(rename_all = "snake_case")]
 pub enum Url {
