@@ -1,5 +1,7 @@
 [baidu]
 app_id = ""
 key = ""
-addr = ""
+url = { https = "" }
+# or
+#url = { http = "" }
 

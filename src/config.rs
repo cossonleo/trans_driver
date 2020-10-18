@@ -3,14 +3,30 @@ use serde::Deserialize;
 use std::ffi::{OsStr, OsString};
 use std::path::{Component, Path, PathBuf};
 
+//#[serde(rename_all = "snake_case", tag = "type")]
+//#[derive(Debug, Deserialize, Clone)]
+//pub enum Url {
+//    Http{ addr: String },
+//    Https{ addr: String },
+//}
+
 #[derive(Debug, Deserialize, Clone)]
+#[serde(rename_all = "snake_case")]
+pub enum Url {
+    Http(String),
+    Https(String),
+}
+
+#[derive(Debug, Deserialize, Clone)]
+#[serde(rename_all = "snake_case")]
 pub struct Baidu {
-    pub addr: String,
+    pub url: Url,
     pub app_id: String,
     pub key: String,
 }
 
 #[derive(Debug, Deserialize, Clone)]
+#[serde(rename_all = "snake_case")]
 pub struct Config {
     pub baidu: Option<Baidu>,
 }
